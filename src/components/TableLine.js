@@ -37,7 +37,7 @@ const TableLine = ({ coin, index }) => {
             onMouseLeave={() => setShowChart(false)}
           >
             <img src="./assets/chart-icon.svg" alt="chart-icon" />
-            <div className="chart-container" id={coin.name} >
+            <div className="chart-container" id={coin.name}>
               {showChart && <CoinChart coinId={coin.id} coinName={coin.name} />}
             </div>
           </div>
@@ -47,11 +47,7 @@ const TableLine = ({ coin, index }) => {
             target="_blank"
             href={
               "https://www.coingecko.com/fr/pi%C3%A8ces/" +
-              coin.name
-                .toLowerCase()
-                .replace(" ", "-")
-                .replace(" ", "-")
-                .replace(" ", "-")
+              coin.id.toLowerCase()
             }
           >
             <img src="./assets/info-icon.svg" alt="info-icon" />
